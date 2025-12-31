@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Star, Quote } from 'lucide-react';
 import Card from '../components/Card';
-import { supabase } from '../lib/supabase';
 import { motion } from 'framer-motion';
 
 interface Testimonial {
@@ -17,18 +16,9 @@ export default function Testimonials() {
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
 
   useEffect(() => {
-    fetchTestimonials();
+    // Using placeholder data instead of fetching from Supabase
+    setTestimonials(placeholderTestimonials);
   }, []);
-
-  const fetchTestimonials = async () => {
-    const { data } = await supabase
-      .from('testimonials')
-      .select('*')
-      .eq('is_published', true)
-      .order('created_at', { ascending: false });
-
-    if (data) setTestimonials(data);
-  };
 
   const placeholderTestimonials: Testimonial[] = [
     {

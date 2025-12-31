@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { supabase } from '../lib/supabase';
 import { motion } from 'framer-motion';
 
 interface GalleryImage {
@@ -22,18 +21,9 @@ export default function Gallery() {
   ];
 
   useEffect(() => {
-    fetchImages();
+    // Using placeholder data instead of fetching from Supabase
+    setImages(placeholderImages);
   }, []);
-
-  const fetchImages = async () => {
-    const { data } = await supabase
-      .from('gallery_images')
-      .select('*')
-      .eq('is_published', true)
-      .order('created_at', { ascending: false });
-
-    if (data) setImages(data);
-  };
 
   const filteredImages = selectedCategory === 'all'
     ? images

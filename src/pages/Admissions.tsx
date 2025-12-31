@@ -4,7 +4,6 @@ import Card from '../components/Card';
 import Input from '../components/Input';
 import Textarea from '../components/Textarea';
 import Button from '../components/Button';
-import { supabase } from '../lib/supabase';
 import { motion } from 'framer-motion';
 
 export default function Admissions() {
@@ -21,40 +20,29 @@ export default function Admissions() {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError('');
 
     try {
-      const { error: submitError } = await supabase
-        .from('application_submissions')
-        .insert([{
-          parent_name: formData.parent_name,
-          email: formData.email,
-          phone: formData.phone,
-          student_name: formData.student_name,
-          student_age: parseInt(formData.student_age),
-          program: formData.program,
-          message: formData.message
-        }]);
-
-      if (submitError) throw submitError;
-
-      setSuccess(true);
-      setFormData({
-        parent_name: '',
-        email: '',
-        phone: '',
-        student_name: '',
-        student_age: '',
-        program: '',
-        message: ''
-      });
+      // Simulate form submission success
+      setTimeout(() => {
+        setSuccess(true);
+        setFormData({
+          parent_name: '',
+          email: '',
+          phone: '',
+          student_name: '',
+          student_age: '',
+          program: '',
+          message: ''
+        });
+        setLoading(false);
+      }, 1000);
     } catch (err) {
       setError('Failed to submit application. Please try again.');
       console.error(err);
-    } finally {
       setLoading(false);
     }
   };
@@ -436,6 +424,9 @@ export default function Admissions() {
 
                   <p className="text-sm text-blue-500 text-center bg-blue-100 rounded-lg p-2 font-medium">
                     By submitting this form, you agree to be contacted by our admissions team.
+                  </p>
+                  <p className="text-sm text-gray-500 text-center mt-2 font-medium">
+                    Note: Form submissions are simulated in this demo.
                   </p>
                 </form>
               )}

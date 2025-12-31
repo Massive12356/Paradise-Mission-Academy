@@ -5,7 +5,6 @@ import Card from '../components/Card';
 import Input from '../components/Input';
 import Textarea from '../components/Textarea';
 import Button from '../components/Button';
-import { supabase } from '../lib/supabase';
 import { motion } from 'framer-motion';
 
 export default function Contact() {
@@ -21,36 +20,28 @@ export default function Contact() {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError('');
 
     try {
-      // If subject is 'Other', use the custom subject entered by the user
-      const submissionData = formData.subject === 'Other' 
-        ? { ...formData, subject: formData.otherSubject }
-        : formData;
-      
-      const { error: submitError } = await supabase
-        .from('contact_submissions')
-        .insert([submissionData]);
-
-      if (submitError) throw submitError;
-
-      setSuccess(true);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: '',
-        otherSubject: ''
-      });
+      // Simulate form submission success
+      setTimeout(() => {
+        setSuccess(true);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: '',
+          otherSubject: ''
+        });
+        setLoading(false);
+      }, 1000);
     } catch (err) {
       setError('Failed to send message. Please try again.');
       console.error(err);
-    } finally {
       setLoading(false);
     }
   };

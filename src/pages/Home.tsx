@@ -13,7 +13,6 @@ import {
 } from "lucide-react";
 import Button from "../components/Button";
 import Card from "../components/Card";
-import { supabase } from "../lib/supabase";
 import { motion, AnimatePresence } from "framer-motion";
 import heroPic1 from "../images/1.jpg";
 import heroPic2 from "../images/3.avif";
@@ -87,26 +86,51 @@ export default function Home() {
   }, [nextSlide]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const { data: testimonialsData } = await supabase
-        .from("testimonials")
-        .select("*")
-        .eq("is_published", true)
-        .order("created_at", { ascending: false })
-        .limit(3);
-
-      const { data: newsData } = await supabase
-        .from("news_events")
-        .select("*")
-        .eq("is_published", true)
-        .order("created_at", { ascending: false })
-        .limit(3);
-
-      if (testimonialsData) setTestimonials(testimonialsData);
-      if (newsData) setNews(newsData);
-    };
-
-    fetchData();
+    // Using placeholder data instead of fetching from Supabase
+    setTestimonials([
+      {
+        id: '1',
+        parent_name: 'Mrs. Akosua Mensah',
+        content: 'Paradise Mission Academy has been a blessing to our family. The teachers are caring and professional, and my son has grown so much academically and socially.',
+        rating: 5
+      },
+      {
+        id: '2',
+        parent_name: 'Mr. David Osei',
+        content: 'We moved our daughter here from another school and the difference is remarkable. The curriculum is engaging, the facilities are excellent.',
+        rating: 5
+      },
+      {
+        id: '3',
+        parent_name: 'Mrs. Grace Adu',
+        content: 'As a working mother, I appreciate the strong home-school communication. Teachers keep me updated on my son\'s progress.',
+        rating: 5
+      }
+    ]);
+    
+    setNews([
+      {
+        id: '1',
+        title: 'New Academic Year 2024/2025 Begins',
+        content: 'We are excited to welcome all students back for another year of learning and growth. Registration is now open for new students.',
+        category: 'Announcement',
+        created_at: new Date().toISOString()
+      },
+      {
+        id: '2',
+        title: 'Annual Sports Day - March 15',
+        content: 'Join us for our Annual Sports Day featuring athletics, football, and fun games for all age groups.',
+        category: 'Event',
+        created_at: new Date(Date.now() - 86400000).toISOString()
+      },
+      {
+        id: '3',
+        title: 'Students Excel in National Mathematics Competition',
+        content: 'We are proud to announce that our Primary 6 students won 2nd place in the Regional Mathematics Olympiad.',
+        category: 'News',
+        created_at: new Date(Date.now() - 172800000).toISOString()
+      }
+    ]);
   }, []);
 
   const programs = [
@@ -536,7 +560,7 @@ export default function Home() {
                       {item.title}
                     </h3>
                     <p className="text-gray-600 font-medium line-clamp-3">{item.content}</p>
-                    <p className="text-gray-400 text-sm mt-3">
+                    <p className="text-gray-400 text-sm mt-3 font-medium">
                       {new Date(item.created_at).toLocaleDateString()}
                     </p>
                   </Card>

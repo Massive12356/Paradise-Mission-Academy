@@ -148,7 +148,7 @@ export default function Programs() {
                           <p className="text-sm text-gray-600 mb-2">
                             <span className="font-semibold">Class Size:</span>
                           </p>
-                          <p className="text-sm text-gray-700">{program.ratio}</p>
+                          <p className="text-sm text-gray-700 font-medium">{program.ratio}</p>
                         </div>
                       </div>
                     </Card>

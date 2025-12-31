@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Calendar, Tag } from 'lucide-react';
 import Card from '../components/Card';
-import { supabase } from '../lib/supabase';
 import { motion } from 'framer-motion';
 
 interface NewsEvent {
@@ -26,18 +25,9 @@ export default function News() {
   ];
 
   useEffect(() => {
-    fetchNewsEvents();
+    // Using placeholder data instead of fetching from Supabase
+    setItems(placeholderItems);
   }, []);
-
-  const fetchNewsEvents = async () => {
-    const { data } = await supabase
-      .from('news_events')
-      .select('*')
-      .eq('is_published', true)
-      .order('created_at', { ascending: false });
-
-    if (data) setItems(data);
-  };
 
   const filteredItems = selectedCategory === 'all'
     ? items
