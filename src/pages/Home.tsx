@@ -613,7 +613,6 @@ export default function Home() {
               <Button
                 size="lg"
                 variant="orange"
-                className="bg-white text-blue-600 border-white hover:bg-blue-50"
               >
                 Contact Us
               </Button>
