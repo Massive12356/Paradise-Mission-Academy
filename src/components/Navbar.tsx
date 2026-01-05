@@ -25,12 +25,12 @@ export default function Navbar() {
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center space-x-3">
-            <div className="bg-blue-600 p-2 rounded-lg">
+            <div className="bg-orange-700 p-2 rounded-lg">
               <GraduationCap className="h-8 w-8 text-white" />
             </div>
             <div>
-              <h1 className="text-lg font-bold text-blue-900">Paradise Mission Academy</h1>
-              <p className="text-xs text-gray-600 font-medium">Nurturing Young Minds</p>
+              <h1 className="text-lg font-bold text-orange-600">Paradise Mission Academy</h1>
+              <p className="text-xs text-orange-500 font-medium">Nurturing Young Minds</p>
             </div>
           </Link>
 
@@ -41,8 +41,8 @@ export default function Navbar() {
                 to={link.path}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   isActive(link.path)
-                    ? 'text-blue-600 bg-blue-50'
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                    ? 'text-orange-600 bg-orange-50'
+                    : 'text-orange-700 hover:text-orange-600 hover:bg-orange-50'
                 }`}
               >
                 {link.label}

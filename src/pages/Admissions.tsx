@@ -97,7 +97,7 @@ export default function Admissions() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
+        className="bg-gradient-to-br from-orange-700 to-orange-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Admissions</h1>
           <p className="text-xl text-blue-100 max-w-3xl font-medium">
@@ -137,8 +137,8 @@ export default function Admissions() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 * index }}
               >
-                <Card className="text-center">
-                  <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
+                <Card className="text-center border-2">
+                  <div className="bg-green-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg animate-pulse">
                     {step.number}
                   </div>
                   <h3 className="font-bold text-gray-900 mb-2">{step.title}</h3>
@@ -176,23 +176,23 @@ export default function Admissions() {
                   <div className="space-y-4">
                     <div className="flex justify-between items-center py-2 border-b">
                       <span className="font-semibold text-gray-900">Crèche</span>
-                      <span className="text-gray-600 font-medium">6 months - 2 years</span>
+                      <span className="text-orange-600 font-medium">6 months - 2 years</span>
                     </div>
                     <div className="flex justify-between items-center py-2 border-b">
                       <span className="font-semibold text-gray-900">Nursery</span>
-                      <span className="text-gray-600 font-medium">2 - 3 years</span>
+                      <span className="text-orange-600 font-medium">2 - 3 years</span>
                     </div>
                     <div className="flex justify-between items-center py-2 border-b">
                       <span className="font-semibold text-gray-900">Kindergarten</span>
-                      <span className="text-gray-600 font-medium">4 - 5 years</span>
+                      <span className="text-orange-600 font-medium">4 - 5 years</span>
                     </div>
                     <div className="flex justify-between items-center py-2 border-b">
                       <span className="font-semibold text-gray-900">Primary 1-6</span>
-                      <span className="text-gray-600 font-medium">6 - 12 years</span>
+                      <span className="text-orange-600 font-medium">6 - 12 years</span>
                     </div>
                     <div className="flex justify-between items-center py-2">
                       <span className="font-semibold text-gray-900">JHS 1</span>
-                      <span className="text-gray-600 font-medium">12 - 13 years</span>
+                      <span className="text-orange-600 font-medium">12 - 13 years</span>
                     </div>
                   </div>
                 </Card>
@@ -235,24 +235,24 @@ export default function Admissions() {
                 <Card className="mb-8">
                   <div className="space-y-4">
                     <div className="flex items-start space-x-3">
-                      <Calendar className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+                      <Calendar className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
                       <div>
                         <h3 className="font-semibold text-gray-900 mb-1">First Term</h3>
-                        <p className="text-gray-600 text-sm font-medium">September - December</p>
+                        <p className="text-orange-600 text-sm font-medium">September - December</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
-                      <Calendar className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+                      <Calendar className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
                       <div>
                         <h3 className="font-semibold text-gray-900 mb-1">Second Term</h3>
-                        <p className="text-gray-600 text-sm font-medium">January - April</p>
+                        <p className="text-orange-600 text-sm font-medium">January - April</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
-                      <Calendar className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+                      <Calendar className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
                       <div>
                         <h3 className="font-semibold text-gray-900 mb-1">Third Term</h3>
-                        <p className="text-gray-600 text-sm font-medium">May - July</p>
+                        <p className="text-orange-600 text-sm font-medium">May - July</p>
                       </div>
                     </div>
                   </div>
@@ -273,7 +273,7 @@ export default function Admissions() {
                   <p className="text-gray-600 font-medium mb-4">
                     Our fee structure is competitive and transparent. Fees cover tuition, learning materials, and most activities.
                   </p>
-                  <div className="flex items-center space-x-2 text-blue-600 mb-4">
+                  <div className="flex items-center space-x-2 text-green-600 mb-4 cursor-pointer">
                     <Download className="h-5 w-5" />
                     <span className="font-semibold">Download detailed fee schedule (PDF)</span>
                   </div>
@@ -422,11 +422,8 @@ export default function Admissions() {
                     {loading ? 'Submitting...' : 'Submit Application'}
                   </Button>
 
-                  <p className="text-sm text-blue-500 text-center bg-blue-100 rounded-lg p-2 font-medium">
+                  <p className="text-sm text-green-500 text-center bg-green-100 rounded-lg p-2 font-medium">
                     By submitting this form, you agree to be contacted by our admissions team.
-                  </p>
-                  <p className="text-sm text-gray-500 text-center mt-2 font-medium">
-                    Note: Form submissions are simulated in this demo.
                   </p>
                 </form>
               )}
@@ -439,13 +436,13 @@ export default function Admissions() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1.6 }}
-        className="py-16 bg-gray-50">
+        className="py-16 bg-orange-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.7 }}
-            className="bg-blue-600 text-white rounded-xl p-8">
+            className="bg-orange-600 text-white rounded-xl p-8">
             <FileText className="h-12 w-12 mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-4">Need More Information?</h3>
             <p className="text-blue-100 font-medium mb-6">

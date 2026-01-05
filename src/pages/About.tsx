@@ -32,7 +32,7 @@ export default function About() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
+        className="bg-gradient-to-br from-orange-700 to-orange-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">About Us</h1>
           <p className="text-xl text-blue-100 max-w-3xl font-medium">
@@ -83,8 +83,8 @@ export default function About() {
             className="grid md:grid-cols-2 gap-12">
             <div>
               <div className="flex items-center mb-6">
-                <div className="bg-blue-100 p-3 rounded-lg mr-4">
-                  <Eye className="h-8 w-8 text-blue-600" />
+                <div className="bg-orange-100 p-3 rounded-lg mr-4">
+                  <Eye className="h-8 w-8 text-orange-600" />
                 </div>
                 <h2 className="text-3xl font-bold text-gray-900">Our Vision</h2>
               </div>
@@ -133,9 +133,9 @@ export default function About() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 * index }}
                 >
-                  <Card hover className="text-center">
-                    <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Icon className="h-8 w-8 text-blue-600" />
+                  <Card hover className="text-center border-2 hover:border-green-600">
+                    <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Icon className="h-8 w-8 text-green-600" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
                     <p className="text-gray-600 font-medium">{value.description}</p>
@@ -216,7 +216,7 @@ export default function About() {
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900">Mr. Joseph Asante</h3>
-              <p className="text-blue-600 font-semibold">School Owner</p>
+              <p className="text-green-600 font-semibold">School Owner</p>
               <p className="text-gray-600 mt-2 font-medium">Visionary leader and founder of Paradise Mission Academy</p>
             </div>
 
@@ -229,7 +229,7 @@ export default function About() {
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900">Mrs. Elizabeth Mensah</h3>
-              <p className="text-blue-600 font-semibold">Headteacher</p>
+              <p className="text-green-600 font-semibold">Headteacher</p>
               <p className="text-gray-600 mt-2 font-medium">Leading our educational programs with excellence</p>
             </div>
 
@@ -242,7 +242,7 @@ export default function About() {
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900">Mr. Kwame Osei</h3>
-              <p className="text-blue-600 font-semibold">Assistant Headteacher</p>
+              <p className="text-green-600 font-semibold">Assistant Headteacher</p>
               <p className="text-gray-600 mt-2 font-medium">Supporting academic excellence and student development</p>
             </div>
           </motion.div>
@@ -271,13 +271,13 @@ export default function About() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
               className="flex flex-wrap justify-center gap-6 text-gray-600">
-              <div className="flex items-center space-x-2 bg-green-100 p-3 rounded-lg">
+              <div className="flex items-center space-x-2 bg-green-100 p-3 rounded-lg animate-pulse">
                 <Award className="h-6 w-6 text-green-600" />
                 <span className="font-medium text-green-600">Ghana Education Service Registered</span>
               </div>
-              <div className="flex items-center space-x-2 bg-blue-100 p-3 rounded-lg">
-                <Award className="h-6 w-6 text-blue-600" />
-                <span className="font-medium text-blue-600">National Curriculum Aligned</span>
+              <div className="flex items-center space-x-2 bg-orange-100 p-3 rounded-lg animate-pulse">
+                <Award className="h-6 w-6 text-orange-600" />
+                <span className="font-medium text-orange-600">National Curriculum Aligned</span>
               </div>
             </motion.div>
           </motion.div>

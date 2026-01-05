@@ -10,7 +10,7 @@ export default function Downloads() {
       description: 'Comprehensive guide to our programs, facilities, and educational approach',
       icon: BookOpen,
       size: '2.5 MB',
-      color: 'bg-blue-100 text-blue-600'
+      color: 'bg-orange-100 text-orange-600'
     },
     {
       title: 'Academic Calendar 2024/2025',
@@ -55,10 +55,10 @@ export default function Downloads() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
+        className="bg-gradient-to-br from-orange-700 to-orange-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Downloads</h1>
-          <p className="text-xl text-blue-100 max-w-3xl font-medium">
+          <p className="text-xl text-orange-100 max-w-3xl font-medium">
             Access important documents and resources
           </p>
         </div>
@@ -75,7 +75,7 @@ export default function Downloads() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-center mb-12">
-            <Download className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+            <Download className="h-12 w-12 text-orange-600 mx-auto mb-4" />
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Available Resources
             </h2>
@@ -104,9 +104,9 @@ export default function Downloads() {
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
                     <p className="text-gray-600 mb-4 text-sm font-medium">{item.description}</p>
                     <div className="flex items-center justify-between pt-4 border-t">
-                      <span className="text-sm text-green-500 font-medium">{item.size}</span>
-                      <div className="flex items-center text-blue-600 font-semibold text-sm">
-                        <Download className="h-4 w-4 mr-1" />
+                      <span className="text-sm text-orange-500 font-medium">{item.size}</span>
+                      <div className="flex items-center text-green-600 font-semibold text-sm">
+                        <Download className="h-4 w-4 mr-1 text-orange-600" />
                         Download PDF
                       </div>
                     </div>
@@ -122,15 +122,15 @@ export default function Downloads() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.6 }}
-        className="py-16 bg-gray-50">
+        className="py-16 bg-orange-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.7 }}
-            className="bg-white rounded-xl shadow-md p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Need Help?</h2>
-            <p className="text-gray-600 mb-6 font-medium">
+            className="bg-orange-500 rounded-xl shadow-md p-8">
+            <h2 className="text-2xl font-bold text-white mb-4">Need Help?</h2>
+            <p className="text-white mb-6 font-medium">
               If you're having trouble downloading any documents or need additional information, please don't hesitate to contact our office. We're here to help!
             </p>
             <motion.div 
@@ -143,12 +143,12 @@ export default function Downloads() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.9 }}
                 className="flex items-start space-x-3">
-                <div className="bg-blue-100 p-2 rounded-lg flex-shrink-0">
-                  <FileText className="h-5 w-5 text-blue-600" />
+                <div className="bg-orange-100 p-2 rounded-lg flex-shrink-0">
+                  <FileText className="h-5 w-5 text-orange-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">Document Format</h3>
-                  <p className="text-sm text-gray-600 font-medium">All documents are provided in PDF format. You'll need a PDF reader to view them.</p>
+                  <h3 className="font-semibold text-white mb-1">Document Format</h3>
+                  <p className="text-sm text-white font-medium">All documents are provided in PDF format. You'll need a PDF reader to view them.</p>
                 </div>
               </motion.div>
               <motion.div 
@@ -156,12 +156,12 @@ export default function Downloads() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1.0 }}
                 className="flex items-start space-x-3">
-                <div className="bg-blue-100 p-2 rounded-lg flex-shrink-0">
-                  <ShieldCheck className="h-5 w-5 text-blue-600" />
+                <div className="bg-orange-100 p-2 rounded-lg flex-shrink-0">
+                  <ShieldCheck className="h-5 w-5 text-orange-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">Updated Regularly</h3>
-                  <p className="text-sm text-gray-600 font-medium">We update these documents regularly to ensure you have the most current information.</p>
+                  <h3 className="font-semibold text-white mb-1">Updated Regularly</h3>
+                  <p className="text-sm text-white font-medium">We update these documents regularly to ensure you have the most current information.</p>
                 </div>
               </motion.div>
             </motion.div>
@@ -186,7 +186,7 @@ export default function Downloads() {
             <p className="text-gray-600 mb-6 font-medium">
               Can't find the document you're looking for? Contact our office and we'll be happy to provide you with the information you need.
             </p>
-            <Link to="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors">
+            <Link to="/contact" className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors">
               Contact Us
             </Link>
           </motion.div>

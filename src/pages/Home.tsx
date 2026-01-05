@@ -216,7 +216,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white h-screen overflow-hidden"
+        className="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white h-screen overflow-hidden"
       >
         <div className="absolute inset-0">
           <AnimatePresence mode="wait">
@@ -237,7 +237,7 @@ export default function Home() {
           </AnimatePresence>
         </div>
 
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-blue-800/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-900/20 to-orange-800/10"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-center">
           <div className="max-w-3xl text-center">
@@ -277,8 +277,8 @@ export default function Home() {
               <Link to="/contact">
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="bg-white text-blue-600 border-white hover:bg-blue-50"
+                  variant="orange"
+                  className="bg-orange-600 text-orange-100 hover:bg-orange-50"
                 >
                   Book a Visit
                 </Button>
@@ -371,7 +371,7 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 * index }}
                 >
-                  <Card hover className="text-center overflow-hidden">
+                  <Card hover className="text-center overflow-hidden border-2 hover:border-orange-600">
                     <div className="h-48 overflow-hidden">
                       <img
                         src={program.image}
@@ -388,7 +388,7 @@ export default function Home() {
                       <h3 className="text-xl font-bold text-gray-900 mb-2">
                         {program.title}
                       </h3>
-                      <p className="text-blue-600 font-semibold mb-3">
+                      <p className="text-orange-600 font-semibold mb-3">
                         {program.age}
                       </p>
                       <p className="text-gray-600 font-medium">{program.description}</p>
@@ -406,7 +406,7 @@ export default function Home() {
             className="text-center mt-8"
           >
             <Link to="/programs">
-              <Button variant="outline">
+              <Button variant="secondary">
                 Learn More About Our Programs
                 <ArrowRight className="inline ml-2 h-5 w-5" />
               </Button>
@@ -442,8 +442,8 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: 0.1 * index }}
                 className="flex items-start space-x-4"
               >
-                <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                  <span className="text-green-600 font-bold text-lg">
+                <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                  <span className="text-orange-600 font-bold text-lg">
                     {index + 1}
                   </span>
                 </div>
@@ -513,7 +513,7 @@ export default function Home() {
               className="text-center mt-8"
             >
               <Link to="/testimonials">
-                <Button variant="outline">
+                <Button variant="secondary">
                   Read More Testimonials
                   <ArrowRight className="inline ml-2 h-5 w-5" />
                 </Button>
@@ -552,7 +552,7 @@ export default function Home() {
                 >
                   <Card hover>
                     <div className="mb-3">
-                      <span className="inline-block bg-blue-100 text-blue-600 text-xs font-semibold px-3 py-1 rounded-full">
+                      <span className="inline-block bg-orange-100 text-orange-600 text-xs font-semibold px-3 py-1 rounded-full">
                         {item.category}
                       </span>
                     </div>
@@ -575,7 +575,7 @@ export default function Home() {
               className="text-center mt-8"
             >
               <Link to="/news">
-                <Button variant="outline">
+                <Button variant="secondary">
                   View All News & Events
                   <ArrowRight className="inline ml-2 h-5 w-5" />
                 </Button>
@@ -589,7 +589,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.7 }}
-        className="py-16 bg-blue-600 text-white"
+        className="py-16 bg-orange-800 text-white"
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -612,7 +612,7 @@ export default function Home() {
             <Link to="/contact">
               <Button
                 size="lg"
-                variant="outline"
+                variant="orange"
                 className="bg-white text-blue-600 border-white hover:bg-blue-50"
               >
                 Contact Us

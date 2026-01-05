@@ -100,10 +100,10 @@ export default function News() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
+        className="bg-gradient-to-br from-orange-700 to-orange-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">News & Events</h1>
-          <p className="text-xl text-blue-100 max-w-3xl font-medium">
+          <p className="text-xl text-orange-100 max-w-3xl font-medium">
             Stay updated with the latest happenings from Crèche to JHS 1
           </p>
         </div>
@@ -129,8 +129,8 @@ export default function News() {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-2 rounded-full font-medium transition-all ${
                   selectedCategory === category.id
-                    ? 'bg-blue-600 text-white shadow-md'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-green-600 text-white shadow-md'
+                    : 'bg-green-100 text-gray-700 hover:bg-green-200'
                 }`}
               >
                 {category.label}
@@ -171,8 +171,8 @@ export default function News() {
                     <div className="flex items-center gap-2 mb-3">
                       <span className={`inline-flex items-center gap-1 text-xs font-semibold px-3 py-1 rounded-full ${
                         item.category === 'event' ? 'bg-green-100 text-green-700' :
-                        item.category === 'announcement' ? 'bg-yellow-100 text-yellow-700' :
-                        'bg-blue-100 text-blue-700'
+                        item.category === 'announcement' ? 'bg-orange-100 text-orange-700' :
+                        'bg-green-100 text-green-700'
                       }`}>
                         <Tag className="h-3 w-3" />
                         {item.category}
@@ -183,11 +183,11 @@ export default function News() {
                     <div className="flex items-center justify-between text-sm text-gray-500 pt-4 border-t">
                       {item.event_date && (
                         <div className="flex items-center gap-1 ">
-                          <Calendar className="h-4 w-4 text-blue-500" />
-                          <span className="font-medium text-blue-500">{new Date(item.event_date).toLocaleDateString()}</span>
+                          <Calendar className="h-4 w-4 text-green-500" />
+                          <span className="font-medium text-green-500">{new Date(item.event_date).toLocaleDateString()}</span>
                         </div>
                       )}
-                      <span className="font-medium text-blue-500">{new Date(item.created_at).toLocaleDateString()}</span>
+                      <span className="font-medium text-green-500">{new Date(item.created_at).toLocaleDateString()}</span>
                     </div>
                   </Card>
                 </motion.div>

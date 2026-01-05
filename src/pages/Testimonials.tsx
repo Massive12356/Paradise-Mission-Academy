@@ -79,10 +79,10 @@ export default function Testimonials() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
+        className="bg-gradient-to-br from-orange-700 to-orange-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Testimonials</h1>
-          <p className="text-xl text-blue-100 max-w-3xl font-medium">
+          <p className="text-xl text-orange-100 max-w-3xl font-medium">
             Hear from parents about their experiences with our school
           </p>
         </div>
@@ -99,7 +99,7 @@ export default function Testimonials() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-center mb-12">
-            <Quote className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+            <Quote className="h-12 w-12 text-orange-600 mx-auto mb-4" />
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               What Parents Say
             </h2>
@@ -120,10 +120,10 @@ export default function Testimonials() {
                 transition={{ duration: 0.5, delay: 0.5 + index * 0.05 }}
                 key={testimonial.id}>
                 <Card className="relative">
-                  <Quote className="h-8 w-8 text-blue-100 absolute top-6 right-6" />
+                  <Quote className="h-8 w-8 text-orange-600 absolute top-6 right-6 animate-pulse" />
                   <div className="flex mb-3">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                      <Star key={i} className="h-5 w-5 text-orange-400 fill-current" />
                     ))}
                   </div>
                   <p className="text-gray-600 mb-6 italic leading-relaxed font-medium">
@@ -146,13 +146,13 @@ export default function Testimonials() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.6 }}
-        className="py-16 bg-gray-50">
+        className="py-16 bg-orange-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.7 }}
-            className="bg-white rounded-xl shadow-md p-8">
+            className="bg-orange-500 rounded-xl shadow-md p-8">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -163,24 +163,24 @@ export default function Testimonials() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.9 }}
               >
-                <p className="text-4xl font-bold text-blue-600 mb-2">500+</p>
-                <p className="text-gray-600 font-medium">Happy Students</p>
+                <p className="text-4xl font-bold text-white mb-2">500+</p>
+                <p className="text-white font-medium">Happy Students</p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1.0 }}
               >
-                <p className="text-4xl font-bold text-blue-600 mb-2">50+</p>
-                <p className="text-gray-600 font-medium">Qualified Teachers</p>
+                <p className="text-4xl font-bold text-white mb-2">50+</p>
+                <p className="text-white font-medium">Qualified Teachers</p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1.1 }}
               >
-                <p className="text-4xl font-bold text-blue-600 mb-2">14+</p>
-                <p className="text-gray-600 font-medium">Years of Excellence</p>
+                <p className="text-4xl font-bold text-white mb-2">14+</p>
+                <p className="text-white font-medium">Years of Excellence</p>
               </motion.div>
             </motion.div>
           </motion.div>

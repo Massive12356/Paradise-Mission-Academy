@@ -90,7 +90,7 @@ export default function Gallery() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
+        className="bg-gradient-to-br from-orange-700 to-orange-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Gallery</h1>
           <p className="text-xl text-blue-100 max-w-3xl font-medium">
@@ -119,8 +119,8 @@ export default function Gallery() {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-2 rounded-full font-medium transition-all ${
                   selectedCategory === category.id
-                    ? 'bg-blue-600 text-white shadow-md'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-green-600 text-white shadow-md'
+                    : 'bg-green-100 text-gray-700 hover:bg-green-200'
                 }`}
               >
                 {category.label}
@@ -158,7 +158,7 @@ export default function Gallery() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-4">
                       <h3 className="text-white font-semibold text-lg">{image.title}</h3>
-                      <span className="inline-block bg-blue-500 text-white text-xs px-2 py-1 rounded mt-2">
+                      <span className="inline-block bg-orange-500 text-white text-xs px-2 py-1 rounded mt-2 font-medium">
                         {categories.find(c => c.id === image.category)?.label || image.category}
                       </span>
                     </div>
