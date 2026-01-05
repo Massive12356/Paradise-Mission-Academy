@@ -613,6 +613,7 @@ export default function Home() {
               <Button
                 size="lg"
                 variant="orange"
+                className="bg-orange-500"
               >
                 Contact Us
               </Button>
